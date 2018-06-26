@@ -1,0 +1,16 @@
+{
+  "name": "exercise-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "strip-quotes.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha *.spec.js --reporter spec"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

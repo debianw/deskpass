@@ -12,7 +12,11 @@ const unavailableTimes = [
   { start: "2018-06-22T14:00:00.000Z", end: "2018-06-22T16:00:00.000Z" },
 ];
 
-const availableTimes = availableIntervalTimes("2018-06-22T08:00:00.000Z", "2018-06-22T17:00:00.000Z", unavailableTimes);
+const availableTimes = availableIntervalTimes(
+  "2018-06-22T08:00:00.000Z",
+  "2018-06-22T17:00:00.000Z",
+  unavailableTimes
+);
 
 /* Output:
 [

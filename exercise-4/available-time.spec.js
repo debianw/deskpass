@@ -147,6 +147,36 @@ describe('Available invertal time', function () {
 
   //
   it('should return an interval of available times, case #6', function () {
+    const unavailableTimes = [
+      { start: "2018-06-22T09:00:00.000Z", end: "2018-06-22T10:00:00.000Z" },
+      { start: "2018-06-22T14:00:00.000Z", end: "2018-06-22T16:00:00.000Z" },
+      { start: "2018-06-22T18:00:00.000Z", end: "2018-06-22T20:00:00.000Z" },
+    ];
+
+    const availableTimes = availableIntervalTimes("2018-06-22T08:00:00.000Z", "2018-06-22T22:00:00.000Z", unavailableTimes);
+
+    castIntervalToString(availableTimes).should.be.deep.equal([
+      {
+        "start": "2018-06-22T08:00:00.000Z",
+        "end": "2018-06-22T09:00:00.000Z",
+      },
+      {
+        "start": "2018-06-22T10:00:00.000Z",
+        "end": "2018-06-22T14:00:00.000Z",
+      },
+      {
+        "start": "2018-06-22T16:00:00.000Z",
+        "end": "2018-06-22T18:00:00.000Z",
+      },
+      {
+        "start": "2018-06-22T20:00:00.000Z",
+        "end": "2018-06-22T22:00:00.000Z",
+      }
+    ]);
+  });
+
+  //
+  it('should return an interval of available times, case #7', function () {
     const unavailableTimes = [];
 
     const availableTimes = availableIntervalTimes("2018-06-22T08:30:00.000Z", "2018-06-22T15:20:00.000Z", unavailableTimes);

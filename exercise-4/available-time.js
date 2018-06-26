@@ -39,9 +39,9 @@ const sortIntervalTimes = (interval = []) => {
 /**
  * Returns an array of available  itervals
  * 
- * @param {*} start 
- * @param {*} end 
- * @param {*} unavailableIntervalTimes 
+ * @param {*} startTime 
+ * @param {*} endTime 
+ * @param {*} unavailableIntervalTimes
  */
 
 const availableIntervalTimes = (startTime, endTime, unavailableIntervalTimes = []) => {
@@ -62,11 +62,7 @@ const availableIntervalTimes = (startTime, endTime, unavailableIntervalTimes = [
       end.getTime() >= range.start.getTime()
     ));
 
-    // console.log('Unavailable interval: ==> ', JSON.stringify(unavailableIntervalTimes, 0, 2));
-
-    for (let i = 0, len = unavailableIntervalTimes.length; i < len; i++) {
-      const range = unavailableIntervalTimes[i];
-
+    unavailableIntervalTimes.forEach((range, i) => {
       if (i === 0 && start.getTime() < unavailableIntervalTimes[i].start.getTime()) {
         availableInterval.push({
           start,
@@ -74,19 +70,17 @@ const availableIntervalTimes = (startTime, endTime, unavailableIntervalTimes = [
         });
       }
       
-      const nextRange = unavailableIntervalTimes[i+1];
-      const nextEnd = nextRange ? nextRange.start : end;
+      const nextEnd = unavailableIntervalTimes[i+1]
+        ? unavailableIntervalTimes[i+1].start
+        : end;
 
       if (range.end.getTime() < nextEnd.getTime()) {
         availableInterval.push({
           start: range.end,
           end: nextEnd,
         });
-      }
-      
-    }
-
-    // console.log('Available interval: ==> ', JSON.stringify(availableInterval, 0, 2));
+      } 
+    });
 
     return availableInterval;
   } catch (err) {

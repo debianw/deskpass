@@ -5,7 +5,7 @@ const {
 } = require('./strip-quotes');
 
 //
-describe('Slugify email', function () {
+describe('Strip quotes', function () {
 
   it('should strip quotes from a string', function () {
     const str = `sdf'sdfsdf'sdf\"s sdf sdf 'sdf '' dfsdf'`;

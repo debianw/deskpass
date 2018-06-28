@@ -1,7 +1,7 @@
 //
 const initialState = {
   keys: [],
-  pitch: {},
+  pitch: 'low',
   power: 'off',
 };
 
@@ -25,6 +25,9 @@ export default (state = initialState, action) => {
         ...state,
         pitch: action.pitch,
       }
+
+    case 'PIANO_RESET':
+      return initialState;
 
     default:
       return state;

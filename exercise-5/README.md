@@ -24,4 +24,4 @@ import PianoContainer from './containers/PianoContainer';
 ```
 
 ### Quick Preview
-[link to SegmentedComponent!](https://exercise-5-rdjfjkbfjs.now.sh/) ( if you open the browser inspector you'll see redux action logs )
+[link to Piano!](https://exercise-5-rdjfjkbfjs.now.sh/) ( if you open the browser inspector you'll see redux action logs )

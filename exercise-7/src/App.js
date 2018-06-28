@@ -25,6 +25,17 @@ class App extends Component {
             options={[
               { label: 'Option 1', value: 'option-1' },
               { label: 'Option 2', value: 'option-2' },
+            ]}
+          />
+          
+          <hr />
+          
+          <SegmentedControl
+            shade="light"
+            onChange={this.onOptionsChanged}
+            options={[
+              { label: 'Option 1', value: 'option-1' },
+              { label: 'Option 2', value: 'option-2' },
               { label: 'Option 3', value: 'option-3' },
             ]}
           />
@@ -32,6 +43,17 @@ class App extends Component {
 
         <div>
           <h3> Dark shade </h3>
+          <SegmentedControl
+            shade="dark"
+            onChange={this.onOptionsChanged}
+            options={[
+              { label: 'Option 1', value: 'option-1' },
+              { label: 'Option 2', value: 'option-2' },
+            ]}
+          />
+          
+          <hr />
+          
           <SegmentedControl
             shade="dark"
             onChange={this.onOptionsChanged}
@@ -51,6 +73,17 @@ class App extends Component {
             options={[
               { label: 'Option 1', value: 'option-1' },
               { label: 'Option 2', value: 'option-2' },
+            ]}
+          />
+          
+          <hr />
+
+          <SegmentedControl
+            size="small"
+            onChange={this.onOptionsChanged}
+            options={[
+              { label: 'Option 1', value: 'option-1' },
+              { label: 'Option 2', value: 'option-2' },
               { label: 'Option 3', value: 'option-3' },
             ]}
           />
@@ -58,6 +91,17 @@ class App extends Component {
 
         <div>
           <h3> Mini </h3>
+          <SegmentedControl
+            size="mini"
+            onChange={this.onOptionsChanged}
+            options={[
+              { label: 'Option 1', value: 'option-1' },
+              { label: 'Option 2', value: 'option-2' },
+            ]}
+          />
+
+          <hr />
+
           <SegmentedControl
             size="mini"
             onChange={this.onOptionsChanged}

@@ -15,7 +15,9 @@ describe('Available invertal time', function () {
   it('should cast interval of times', function () {
     const interval = castIntervalToDate([{ start: "2018-06-22T14:00:00", end: "2018-06-22T16:00:00" }]);
 
-    interval[0].start.getTime().should.equal(1529697600000);
+    interval[0].start.getUTCFullYear().should.equal(2018);
+    interval[0].start.getUTCMonth().should.equal(5);
+    interval[0].start.getUTCDate().should.equal(22);
   });
 
   //

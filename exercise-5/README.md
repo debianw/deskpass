@@ -31,4 +31,4 @@ import PianoContainer from './containers/PianoContainer';
 4. If Piano switch to off then all configuration is reseted.
 
 ### Quick Preview
-[link to Piano!](https://exercise-5-rdjfjkbfjs.now.sh/) ( if you open the browser inspector you'll see redux action logs )
+[link to Piano!](https://exercise-5-adzpprbaup.now.sh) ( if you open the browser inspector you'll see redux action logs )

@@ -17,7 +17,7 @@ import SegmentedControl from './components/segmented-control';
 ```
 
 ### Quick Preview
-[link to SegmentedComponent!](https://exercise-7-gmlrmgtizn.now.sh/)
+[link to SegmentedComponent!](https://exercise-5-adzpprbaup.now.sh)
 
 ### Init
 

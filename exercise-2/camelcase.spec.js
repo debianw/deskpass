@@ -5,7 +5,7 @@ const {
 } = require('./camelcase');
 
 //
-describe('Slugify email', function () {
+describe('CamelCase', function () {
 
   it('should add space to camelCase string', function () {
     const str = "aStringLikeThis";
